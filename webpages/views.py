@@ -53,16 +53,3 @@ def project_detail(request, id):
     detail = get_object_or_404(OurCollection, pk=id)
     data = {"detail": detail}
     return render(request, "./sections/portfolio-details.html", data)
-
-
-# def contact(request):
-#     if request.method == "POST":
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-
-#     context = {
-#         "form",
-#         form,
-#     }
-#     return render(request, "./sections/contacts.html", context)
