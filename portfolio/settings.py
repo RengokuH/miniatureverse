@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'd&y4#1mv+)#u#9m)6qm$g9e+u4+l5hiq-ue#07hebp^7xv*irt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['theminiatureverse.herokuapp.com', '127.0.0.1']
 
@@ -127,5 +127,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio/static')
 ]
-STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
