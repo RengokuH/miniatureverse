@@ -1,0 +1,16 @@
+{% load static %}
+
+<footer id="footer">
+  {% for details in landingPage %}
+  <div class="container">
+    <h3>{{ details.name }}</h3>
+
+    <div class="social-links">
+      <a href="{{ details.insta_url }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="{{ details.twitter_url }}" class="google-plus"><i class="bx bxl-twitter"></i></a>
+      <a href="{{ details.discord_url }}" class="linkedin"><i class="bx bxl-discord"></i></a>
+      <a href="{{ details.linktree_url }}" class="facebook"><i class="bx bx-link"></i></a>
+    </div>
+  </div>
+  {% endfor %}
+</footer>

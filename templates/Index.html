@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% comment %} {% load 'static' %} {% endcomment %}
+
+  {% block content %}
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  
+  <!-- ======= Header ======= -->
+  {% include './includes/header.html' %}
+  <!-- End Header -->
+
+   <!-- ======= LandingPage Section ======= -->
+   {% include './sections/landingpage.html' %}
+   <!-- End LandingPage -->
+
+  <main id="main">
+
+    <!-- ======= Collections Section ======= -->
+    {% include './sections/collection.html' %}
+    <!-- End Collections Section -->
+
+    <!-- ======= journey Section ======= -->
+    {% include './sections/journey.html' %}
+    <!-- End journey Section -->
+
+    <!-- ======= roadmap Section ======= -->
+    {% include './sections/roadmap.html' %}
+    <!-- End roadmap Section -->
+
+    <!-- ======= our-collection Section ======= -->
+    {% include './sections/our-collection.html' %}
+    <!-- End our-collection Section -->
+
+    <!-- ======= coming-soon Section ======= -->
+    {% include './sections/coming-soon.html' %}
+    <!-- End coming-soon Section -->
+
+    <!-- ======= Contact Section ======= -->
+    {% include './sections/contacts.html' %}
+    <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include './includes/footer.html' %}
+  <!-- End Footer -->
+
+{% endblock %}

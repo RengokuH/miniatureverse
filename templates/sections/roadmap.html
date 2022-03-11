@@ -1,0 +1,62 @@
+{% load static %}
+
+<section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>RoadMap</h2>
+        </div>
+
+        <div class="row">
+        {% for details in roadmap %}
+          <div class="col-lg-6">
+            <h3 class="resume-title">{{ details.title }}</h3>
+            <div class="resume-item">
+              <h4>{{ details.subtitle1 }}</h4>
+              {% if details.date1 != "" %}
+              <h5>{{ details.date1 }}</h5>
+              {% endif %}
+              <p>{{ details.desc1 |safe}}</p>
+            </div>
+            {% if details.subtitle2 != "" %}
+            
+            <div class="resume-item">
+              <h4>{{ res.subtitle2 }}</h4>
+              {% if details.date2 != "" %}
+              <h5>{{ details.date2 }}</h5>
+              {% endif %}
+              <p>{{ details.desc2 |safe}}</p>
+            </div>
+            {% endif %}
+            {% if details.subtitle3 != "" %}
+            <div class="resume-item">
+              <h4>{{ details.subtitle3 }}</h4>
+              {% if details.date3 != "" %}
+              <h5>{{ details.date3 }}</h5>
+              {% endif %}
+              <p>{{ details.desc3 |safe}}</p>
+            </div>
+            {% endif %}
+            {% if details.subtitle4 != "" %}
+            <div class="resume-item">
+              <h4>{{ details.subtitle4 }}</h4>
+              {% if details.date4 != "" %}
+              <h5>{{ details.date4 }}</h5>
+              {% endif %}
+              <p>{{ details.desc4|safe }}</p>
+            </div>
+            {% endif %}
+            {% if details.subtitle5 != "" %}
+            <div class="resume-item">
+              <h4>{{ details.subtitle5 }}</h4>
+              {% if details.date5 != "" %}
+              <h5>{{ details.date5 }}</h5>
+              {% endif %}
+              <p>{{ details.desc5 |safe}}</p>
+            </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </section>

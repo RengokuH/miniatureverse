@@ -1,0 +1,29 @@
+{% load static %}
+
+<section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+
+        {% for details in journey %}
+        <div class="section-title">
+          <h2>{{ details.title }}</h2>
+          <p>{{ details.desc | safe }}</p>
+          <div class="row">
+            <div class="col-md-12 d-flex align-items-stretch aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+              <div class="portfolio-wrap">
+                <img src="{{ details.photo1.url }}" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-wrap">
+                <img src="{{ details.photo2.url }}" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-wrap">
+                <img src="{{ details.photo3.url }}" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-wrap">
+                <img src="{{ details.photo4.url }}" class="img-fluid" alt="">
+              </div>
+            </div>   
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>

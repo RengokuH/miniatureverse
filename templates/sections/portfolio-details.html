@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{{ detail.photo1.url }}" alt="">
+                </div>
+
+                {% if detail.photo2.url != null %}
+                <div class="swiper-slide">
+                  <img src="{{ detail.photo2.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if detail.photo3.url != null %}
+                <div class="swiper-slide">
+                  <img src="{{ detail.photo3.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if detail.photo4.url != null %}
+                <div class="swiper-slide">
+                  <img src="{{ detail.photo4.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if detail.photo5.url != null %}
+                <div class="swiper-slide">
+                  <img src="{{ detail.photo5.url }}" alt="">
+                </div>
+                {% endif %}
+
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>{{ detail.title }}</h3>
+              <p>{{ detail.desc|safe }}</p>
+              
+            </div>
+            <a href="{{ detail.opensea_link }}" style="
+            background: #dc3545;
+            border: 0;
+            padding: 10px 35px;
+            color: #fff;
+            transition: 0.4s;
+            border-radius: 50px;
+            width: 150px;
+          ">Opensea</a>
+          </div>
+          <!-- <div class="portfolio-description">
+            <h2>{{ detail.title }}</h2>
+            {% autoescape off %}
+            <p>{{ detail.desc }}</p>
+            {% endautoescape %}
+          </div> -->
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock %}

@@ -1,0 +1,18 @@
+{% load static %} {% for details in landingPage %}
+<section id="hero" class="d-flex flex-column justify-content-center">
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <h1>{{ details.name }}</h1>
+    <p>
+      <span class="typed" data-typed-items="{{ details.animationText }}"></span>
+    </p>
+    <div class="social-links">
+      <!-- <a href="{{ details.fb_url }}" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+      <a href="{{ details.insta_url }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="{{ details.twitter_url }}" class="google-plus"><i class="bx bxl-twitter"></i></a>
+      <a href="{{ details.discord_url }}" class="linkedin"><i class="bx bxl-discord"></i></a>
+      <a href="{{ details.linktree_url }}" class="facebook"><i class="bx bx-link"></i></a>
+      <!-- <a href="{{ details.opensea_url}}" class="linkedin">Opensea</a> -->
+    </div>
+  </div>
+</section>
+{% endfor %}

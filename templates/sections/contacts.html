@@ -1,0 +1,83 @@
+{% load static %}
+
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Have Query ?</h2>
+    </div>
+
+    <div class="row mt-1">
+      <div class="col-lg-4">
+        <div class="info">
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            {% for details in myContact %}
+            <p>{{ details.email }}</p>
+            {% endfor %}
+          </div>
+
+          <!-- <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>Call:</h4>
+            <p>+91 8318327085</p>
+          </div> -->
+        </div>
+      </div>
+      <!-- <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" name="Submit">
+      </form> -->
+      <div class="col-lg-8 mt-5 mt-lg-0">
+        <form action="" method="POST" role="form">
+          {% csrf_token %}
+          <!-- <div class="row">
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+          </div> -->
+          <div class="form-group mt-3">{{ form.email }}</div>
+          <div class="form-group mt-3">{{ form.message }}</div>
+          <!-- <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">
+              Your message has been sent. Thank you!
+            </div>
+          </div> -->
+          <br>
+          <div class="text-center">
+            <button
+              name="Submit"
+              type="submit"
+              style="
+                background: #dc3545;
+                border: 0;
+                padding: 10px 35px;
+                color: #fff;
+                transition: 0.4s;
+                border-radius: 50px;
+              "
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+</script>

@@ -1,0 +1,24 @@
+{% load static %}
+
+<section id="services" class="services">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Coming Soon</h2>
+    </div>
+
+    <div class="row">
+      {% for details in comingSoon %}
+      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <img  height=100   src="" alt="Android">
+              <h4>{{ details.title }}</h4>
+              <p>{{ details.subtitle }}</p>
+            </div>
+          </div> -->
+      <div class="section-title">
+        <img src="{{ details.photo.url }}" class="img-fluid coming-soon" alt="" />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
