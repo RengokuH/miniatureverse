@@ -52,4 +52,4 @@ def home(request):
 def project_detail(request, id):
     detail = get_object_or_404(OurCollection, pk=id)
     data = {"detail": detail}
-    return render(request, "./sections/portfolio-details.html", data)
+    return render(request, "./portfolio/sections/portfolio-details.html", data)
