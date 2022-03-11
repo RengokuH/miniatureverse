@@ -46,7 +46,7 @@ def home(request):
         "contact": contact,
         "form": form,
     }
-    return render(request, "./portfolio/index.html", data)
+    return render(request, "./index.html", data)
 
 
 def project_detail(request, id):
