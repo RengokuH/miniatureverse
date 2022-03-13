@@ -16,16 +16,16 @@
               {% if details.date1 != "" %}
               <h5>{{ details.date1 }}</h5>
               {% endif %}
-              <p>{{ details.desc1 |safe}}</p>
+              <h3>{{ details.desc1 |safe}}</h3>
             </div>
-            {% if details.subtitle2 != "" %}
+            {% if details.subtitle2 != "" %} 
             
             <div class="resume-item">
-              <h4>{{ res.subtitle2 }}</h4>
+              <h4>{{ details.subtitle2 }}</h4>
               {% if details.date2 != "" %}
               <h5>{{ details.date2 }}</h5>
               {% endif %}
-              <p>{{ details.desc2 |safe}}</p>
+              <h3>{{ details.desc2 |safe}}</h3>
             </div>
             {% endif %}
             {% if details.subtitle3 != "" %}
@@ -34,7 +34,7 @@
               {% if details.date3 != "" %}
               <h5>{{ details.date3 }}</h5>
               {% endif %}
-              <p>{{ details.desc3 |safe}}</p>
+              <h3>{{ details.desc3 |safe}}</h3>
             </div>
             {% endif %}
             {% if details.subtitle4 != "" %}
@@ -43,7 +43,7 @@
               {% if details.date4 != "" %}
               <h5>{{ details.date4 }}</h5>
               {% endif %}
-              <p>{{ details.desc4|safe }}</p>
+              <h3>{{ details.desc4|safe }}</h3>
             </div>
             {% endif %}
             {% if details.subtitle5 != "" %}
@@ -52,7 +52,7 @@
               {% if details.date5 != "" %}
               <h5>{{ details.date5 }}</h5>
               {% endif %}
-              <p>{{ details.desc5 |safe}}</p>
+              <h3>{{ details.desc5 |safe}}</h3>
             </div>
             {% endif %}
           </div>

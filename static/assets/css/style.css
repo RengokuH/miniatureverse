@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 /**
 * Template Name: MyResume - v4.0.1
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -9,7 +11,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: whitesmoke;
   background-color: black;
 }
@@ -291,7 +293,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero.jpg") bottom no-repeat;
+  background: url("../img/hero.png") bottom no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -324,11 +326,11 @@ h6 {
   color: #45505b;
   margin: 15px 0 0 0;
   font-size: 40px;
-  font-family: cursive;
+  /* font-family: cursive; */
 }
 
 #hero p span {
-  color: #dc3545;
+  color: #212529;
   letter-spacing: 1px;
 }
 
@@ -378,13 +380,17 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 42px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: whitesmoke;
+  color: #728394;
+}
+
+.custom-size {
+  width: 1000px;
 }
 
 .section-title h2::before {
@@ -409,10 +415,14 @@ section {
   left: calc(50% - 20px);
 }
 
-.section-title p {
+.section-title h4 {
   margin-bottom: 0;
+  color: hotpink;
 }
 
+.section-title h3 {
+  color: hotpink;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -420,6 +430,7 @@ section {
   font-weight: 700;
   font-size: 26px;
   color: #728394;
+  padding-top: 40px;
 }
 
 .about .content ul {

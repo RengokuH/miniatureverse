@@ -8,6 +8,7 @@ from datetime import datetime
 class LandingPage(models.Model):
     name = models.CharField(max_length=255)
     animationText = models.CharField(max_length=255)
+    # animationText2 = models.CharField(max_length=255, blank=True)
     insta_url = models.CharField(max_length=1000, default="", blank=True)
     twitter_url = models.CharField(max_length=1000, default="", blank=True)
     linktree_url = models.CharField(max_length=1000, default="", blank=True)

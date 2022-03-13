@@ -2,43 +2,59 @@
 
 <section id="about" class="about">
   <div class="container" data-aos="fade-up">
-    
     <div class="section-title">
-      <h1>Aves Kingdom</h1>
-      <p>Aves Kingdom was one of the first kingdoms to get back on the feet after the catastrophic event that shook the mighty Earth. Before the aftermath Aves Kingdom was famous for their race Shubokus that were  magical bird species evolved from  simple bird species that lived around a million years ago. These species somehow managed to escape the fate of extinction. Aves kingdom used to be filled with flora and magical herbs that played a part in revival of the kingdom.</p>
-      <img src="/media/about/Aves.jpg" class="img-fluid collection" alt="">  
+      <h2>AVES KINGDOM</h2>
+      <h4>
+        Aves Kingdom was one of the first kingdoms to get back on the feet after
+        the catastrophic event that shook the mighty Earth. Before the aftermath
+        Aves Kingdom was famous for their race Shubokus that were magical bird
+        species evolved from simple bird species that lived around a million
+        years ago. These species somehow managed to escape the fate of
+        extinction. Aves kingdom used to be filled with flora and magical herbs
+        that played a part in revival of the kingdom.
+      </h4>
+      <img
+        src="/media/about/Aves.png"
+        class="img-fluid collection custom-size"
+        alt=""
+      />
     </div>
 
-    
     {% for details in collection %}
     <div class="section-title">
       <h2>{{ details.title }}</h2>
-      <p>{{ details.desc|safe }}</p>
+      <h4>{{ details.desc|safe }}</h4>
       <!-- <img src="/media/about/Aves.jpg" class="img-fluid" alt="">   -->
     </div>
-    {% endfor %}
+    {% endfor %} {% for collectionsInfos in collectionsInfo %}
 
-    {% for collectionsInfos in collectionsInfo %}
-    
     <div class="row">
       <div class="col-lg-4">
-        <img src="{{ collectionsInfos.photo.url }}" class="img-fluid collection" alt="" />
+        <img
+          src="{{ collectionsInfos.photo.url }}"
+          class="img-fluid collection"
+          alt=""
+        />
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 content">
         <h3>{{ collectionsInfos.title }}</h3>
         <p class="font-italic">{{ collectionsInfos.desc |safe}}</p>
-        <a href="{{ collectionsInfos.opensea_url }}" style="
-                background: #dc3545;
-                border: 0;
-                padding: 10px 35px;
-                color: #fff;
-                transition: 0.4s;
-                border-radius: 50px;
-                width: 150px;
-              ">Opensea</a>
+        <a
+          href="{{ collectionsInfos.opensea_url }}"
+          style="
+            background: #dc3545;
+            border: 0;
+            padding: 10px 35px;
+            color: #fff;
+            transition: 0.4s;
+            border-radius: 50px;
+            width: 150px;
+          "
+          >Opensea</a
+        >
         <!-- <div class="row"> -->
-          <!-- <div class="col-lg-6"> -->
-            <!-- <ul>
+        <!-- <div class="col-lg-6"> -->
+        <!-- <ul>
               <li>
                 <i class="bi bi-chevron-right"></i> <strong>Items:</strong>
                 <span>{{ collectionsInfos.items }}</span>
@@ -56,20 +72,20 @@
                 <span>{{ collectionsInfos.volume_traded }}</span>
               </li>
             </ul> -->
-          <!-- </div> -->
-          <!-- <div class="col-lg-6">
+        <!-- </div> -->
+        <!-- <div class="col-lg-6">
             <ul> -->
-              <!-- <li>
+        <!-- <li>
                 <i class="bi bi-chevron-right"></i> <strong>Twitter:</strong>
                 <span>{{ collectionsInfos.twitter_url }}</span>
               </li> -->
-              <!-- <li>
+        <!-- <li>
                 <i class="bi bi-chevron-right"></i> <strong>Buy Now:</strong>
                 <span>{{ collectionsInfos.opensea_url }}</span>
                
               </li> -->
-              <!-- <a href="{{ details.fb_url }}">Buy Now</a> -->
-            <!-- </ul>
+        <!-- <a href="{{ details.fb_url }}">Buy Now</a> -->
+        <!-- </ul>
           </div> -->
         <!-- </div> -->
         <!-- <p>{{ collectionsInfos.end_desc|safe }}</p> -->
