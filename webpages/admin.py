@@ -12,6 +12,7 @@ class ContactAdmin(admin.ModelAdmin):
 
 
 admin.site.register(LandingPage)
+admin.site.register(RoadmapDesc)
 admin.site.register(Collection)
 admin.site.register(CollectionsInfo)
 admin.site.register(Journey)

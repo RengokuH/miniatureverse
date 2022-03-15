@@ -1,3 +1,4 @@
+from pyexpat import model
 from unicodedata import name
 from django import forms
 from django.db import models
@@ -69,6 +70,11 @@ class Roadmap(models.Model):
     def __str__(self) -> str:
         return self.title
     
+class RoadmapDesc(models.Model):
+    desc = RichTextField(blank= True)
+
+    def __str__(self) -> str:
+        return self.desc
 
 class OurCollection(models.Model):
 

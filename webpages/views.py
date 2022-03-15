@@ -10,6 +10,7 @@ from .models import (
     ComingSoon,
     MyContact,
     Contact,
+    RoadmapDesc,
 )
 from .forms import ContactForm
 
@@ -20,6 +21,7 @@ def home(request):
     collection = Collection.objects.all()
     journey = Journey.objects.all()
     roadmap = Roadmap.objects.all()
+    roadmap_desc = RoadmapDesc.objects.all()
     ourCollection = OurCollection.objects.all()
     comingSoon = ComingSoon.objects.all()
     myContact = MyContact.objects.all()
@@ -45,6 +47,7 @@ def home(request):
         "myContact": myContact,
         "contact": contact,
         "form": form,
+        'roadmap_desc': roadmap_desc
     }
     return render(request, "./index.html", data)
 

@@ -5,6 +5,9 @@
 
         <div class="section-title">
           <h2>RoadMap</h2>
+          {% for details in roadmap_desc %}
+          <h3>{{ details.desc |safe}}</h3>
+          {% endfor %}
         </div>
 
         <div class="row">
